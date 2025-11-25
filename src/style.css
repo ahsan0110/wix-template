@@ -2,7 +2,7 @@
   --lightGrey: #f0f0f0;
   --border-radius: 20px;
   --smallest-font: 20px;
-  --medium-font: 18px;
+  --medium-font: 20px;
   --large-black-text-font: 62px;
   --large-white-text-font: 31px;
   --black-para-font: 22px;
@@ -67,6 +67,66 @@ body {
 .hamburger span.open:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -7px);
 }
+.hero-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 32px;
+  height: 80vh;
+  border-radius: var(--border-radius);
+}
+.hero-img-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 100%;
+  background-image: url("/hero.png");
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  z-index: 1;
+}
+
+/* Card stays above everything */
+.section-card {
+  position: absolute;
+  z-index: 10;
+  top: 10%;
+  left: 32px;
+  width: 35%;
+  height: 70%;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+}
+.section-card h1 {
+  font-size: clamp(2.5rem, 2vw + 1rem, 5rem);
+}
+.section-card h4 {
+  font-size: clamp(1.2rem, 1.2vw + 0.4rem, 1.5rem);
+  font-weight: 100;
+  margin-top: 20px;
+}
+#hero-btn {
+  margin-top: auto;
+}
+.btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 20px 30px;
+  border-radius: 10px;
+  transition: var(--transition-base);
+  width: fit-content;
+}
+.btn:hover {
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+}
 
 @media (max-width: 850px) {
   .hamburger {
@@ -80,30 +140,38 @@ body {
     top: 125px;
     right: 32px;
     background: var(--lightGrey);
-    width: 200px;
+    width: 88%;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
     display: none;
     border-radius: var(--border-radius);
+    z-index: 111;
   }
 
   .pages.active {
     display: flex;
   }
 }
+@media (max-width: 700px){
+    .section-card{
+        width: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
 
-@media (max-width: 435px){
-    body{
-        padding: 12px;
-    }
-    .navbar{
-        padding: 18px 15px;
-    }
-    .heading{
-        font-size: 10px;
-    }
-    .pages{
-        top:80px
-    }
+@media (max-width: 435px) {
+  body {
+    padding: 12px;
+  }
+  .navbar {
+    padding: 18px 15px;
+  }
+  .heading {
+    font-size: 10px;
+  }
+  .pages {
+    top: 80px;
+  }
 }
