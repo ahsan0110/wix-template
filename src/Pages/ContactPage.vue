@@ -1,3 +1,15 @@
 <template>
-    <h1>Contact</h1>
+    <NavBar/>
+    Contact
 </template>
+
+<script>
+import NavBar from '../components/NavBar.vue';
+
+    export default{
+        name:'ContactPage',
+        components:{
+            NavBar,
+        }
+    }
+</script>

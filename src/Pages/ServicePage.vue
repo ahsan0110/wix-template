@@ -1,3 +1,15 @@
 <template>
-    <h1>Service</h1>
+    <NavBar/>
+    Service
 </template>
+
+<script>
+import NavBar from '../components/NavBar.vue';
+
+    export default{
+        name:'ServicePage',
+        components:{
+            NavBar,
+        }
+    }
+</script>
