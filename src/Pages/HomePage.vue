@@ -3,6 +3,9 @@
     <HeroComponent />
     <Information />
     <HomeGrid />
+    <Information topText="Our Process" heading="EFFICIENT WORKFLOW" 
+    bottomText="Our process involves a strategic blend of creativity and analytics to deliver tailored marketing solutions that drive results." />
+
 </template>
 <script>
 import HeroComponent from '../components/HeroComponent.vue';
