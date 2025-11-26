@@ -354,10 +354,94 @@ body {
   width: 70px;
   height: 2px;
   background: #000;
-  margin-bottom:70px;
+  margin-bottom: 70px;
   transform-origin: center;
   transition: transform 0.2s linear;
 }
+.contact-form-section {
+  margin-top: 32px;
+  display: flex;
+
+  gap: 40px;
+  
+}
+.contact-img,
+.contact-form {
+  flex: 1;
+  box-sizing: border-box; 
+}
+.contact-img img {
+  border-radius: var(--border-radius);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-form {
+  padding: clamp(20px, 5vw, 62px);
+}
+.contact-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-head h1 {
+  font-size: clamp(28px, 4vw, 62px);
+  margin-bottom: 40px;
+}
+
+.contact-head p {
+  margin-top: 20px;
+  font-size: clamp(14px, 1.4vw, 32px);
+  
+}
+.contact-input {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.input input,
+.input textarea {
+  width: 100%;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 16px;
+  outline: none;
+  resize: none;
+  transition: border-color 0.3s ease;
+}
+
+
+.contact-input .input textarea {
+  width: 100%;
+  height: clamp(70px, 20vw, 100px);
+  resize: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+  padding: 10px 0;
+  font-size: clamp(14px, 1.5vw, 18px);
+  box-sizing: border-box;
+}
+.input input:focus,
+.input textarea:focus {
+  border-bottom-color: #003cff;
+}
+
 
 @media (max-width: 1150px) {
   .black-div-cards {
@@ -444,6 +528,14 @@ body {
     gap: 15px;
     max-width: 95%;
   }
+  .contact-form-section {
+    flex-direction: column;
+  }
+
+  .contact-img,
+  .contact-form {
+    max-width: 100%;
+  }
 }
 @media (max-width: 750px) {
   .parent {
@@ -468,12 +560,11 @@ body {
     transform: translateX(-50%);
   }
 }
-@media (max-width: 600px){
-    .black-div-cards{
-      display: flex;
-      flex-direction: column;
-    }
-
+@media (max-width: 600px) {
+  .black-div-cards {
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media (max-width: 435px) {
   body {
