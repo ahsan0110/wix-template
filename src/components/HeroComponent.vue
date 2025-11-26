@@ -1,6 +1,6 @@
 <template>
     <section class="hero-section">
-        <div class="hero-img-layer"></div>
+        <div ref="layer" class="hero-img-layer"></div>
         <div class="section-card">
             <h1>TAILORED <br>MARKETING <br>STRATEGIES</h1>
             <h4>Empowering Businesses Digitally</h4>
@@ -8,28 +8,39 @@
         </div>
     </section>
 </template>
-
 <script>
 export default {
-
-
-
     mounted() {
-        const layer = document.querySelector(".hero-img-layer");
-        let lastScroll = window.scrollY;
+        const layer = this.$refs.layer;
         let offset = 0;
+        const maxShift = 80;
+        let ticking = false;
 
-        window.addEventListener("scroll", () => {
-            const current = window.scrollY;
-            const delta = current - lastScroll;
-
-            offset += delta * -0.5; // subtle drift
+        const update = () => {
             layer.style.transform = `translateX(${offset}px)`;
+            ticking = false;
+        };
 
-            lastScroll = current;
-        });
+        this._scrollHandler = () => {
+            const scroll = window.scrollY;
+
+            // absolute parallax, not delta-based drifting
+            offset = scroll * -0.1;
+
+            // clamp
+            offset = Math.max(-maxShift, Math.min(maxShift, offset));
+
+            if (!ticking) {
+                requestAnimationFrame(update);
+                ticking = true;
+            }
+        };
+
+        window.addEventListener("scroll", this._scrollHandler);
+    },
+
+    beforeUnmount() {
+        window.removeEventListener("scroll", this._scrollHandler);
     }
-
-
-}
+};
 </script>
