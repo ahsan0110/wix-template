@@ -250,12 +250,67 @@ body {
   background-color: #000000;
   border: 1px solid #fff;
 }
-.bottom-p{
+.bottom-p {
   max-width: 40%;
   margin-top: 30px;
   text-align: center;
-
 }
+
+.green-parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.green-parent div {
+  /* background-color: #000; */
+  border-radius: var(--border-radius);
+}
+
+.div-strategy {
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  padding: 0 25px;
+}
+.div-strategy h1 {
+  font-size: clamp(18px, 2vw, 32px);
+}
+.div-strategy p {
+  line-height: 25px;
+}
+.div-dark-grey {
+  grid-column: span 2 / span 2;
+  grid-column-start: 4;
+  grid-row-start: 4;
+  background-color: #808080;
+}
+
+.div-green-ni66a {
+  grid-column: span 3 / span 3;
+  grid-row: span 3 / span 3;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+.div-green-ni66a img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+
 
 
 
@@ -286,8 +341,57 @@ body {
   .pages.active {
     display: flex;
   }
-  .bottom-p{
+  .bottom-p {
     max-width: 100%;
+  }
+
+  .green-parent {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+  .div-grey {
+    align-self: center;
+    
+  }
+  .div-line {
+    grid-column: 1;
+  
+    grid-row: 1;
+  }
+  .div-x {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .div-plus {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .div-strategy {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Green image div below strategy */
+  .div-green-ni66a {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    width: 100%;
+    height: 250px; /* smaller on mobile */
+  }
+
+  /* Dark grey div at the bottom */
+  .div-dark-grey {
+    grid-column: 1 / -1;
+    grid-row: 5;
+    height: 100px; /* optional */
+  }
+
+  /* Optional: reduce gaps */
+  .green-parent {
+    gap: 15px;
+    max-width: 95%;
   }
 }
 @media (max-width: 750px) {
@@ -299,7 +403,7 @@ body {
   .div2 p {
     max-width: 100%;
   }
-  .div4{
+  .div4 {
     height: 300px;
   }
   /* .div4 img{
@@ -327,7 +431,7 @@ body {
   .pages {
     top: 80px;
   }
-  .bottom-p{
+  .bottom-p {
     max-width: 100%;
   }
   .info-section h1 {
