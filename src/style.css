@@ -176,6 +176,8 @@ body {
 .div2 p {
   margin-top: 10px;
   font-size: 20px;
+  max-width: 70%;
+  line-height: 25px;
 }
 .div3 {
   grid-column-start: 4;
@@ -184,6 +186,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
   padding: 32px;
 }
 
@@ -273,11 +276,21 @@ body {
     display: flex;
   }
 }
-@media (max-width: 750px){
-    .parent{
-        display: flex;
-        flex-direction: column;
-    }
+@media (max-width: 750px) {
+  .parent {
+    display: flex;
+    flex-direction: column;
+  }
+  .div1 p,
+  .div2 p {
+    max-width: 100%;
+  }
+  .div4{
+    height: 300px;
+  }
+  /* .div4 img{
+    object-position: center top;
+  } */
 }
 @media (max-width: 700px) {
   .section-card {
