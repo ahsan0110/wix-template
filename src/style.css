@@ -319,13 +319,13 @@ body {
   gap: 32px;
 }
 .top-black-div {
-  padding: 62px;
+  padding: clamp(20px, 5vw, 62px);
   background-color: #000;
   border-radius: var(--border-radius);
 }
 .top-black-div h1 {
   color: #fff;
-  font-size: 62px;
+  font-size: clamp(20px, 5vw, 62px);
   margin-top: 20px;
 }
 .top-black-div p {
@@ -363,12 +363,11 @@ body {
   display: flex;
 
   gap: 40px;
-  
 }
 .contact-img,
 .contact-form {
   flex: 1;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 .contact-img img {
   border-radius: var(--border-radius);
@@ -394,7 +393,6 @@ body {
 .contact-head p {
   margin-top: 20px;
   font-size: clamp(14px, 1.4vw, 32px);
-  
 }
 .contact-input {
   display: flex;
@@ -425,7 +423,6 @@ body {
   transition: border-color 0.3s ease;
 }
 
-
 .contact-input .input textarea {
   width: 100%;
   height: clamp(70px, 20vw, 100px);
@@ -441,7 +438,51 @@ body {
 .input textarea:focus {
   border-bottom-color: #003cff;
 }
+footer{
+  background-color: #000;
+  margin-top: 32px;
+  padding: clamp(28px, 4vw, 62px);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  height: clamp(200px, 20vw, 350px);
+}
+.footer-bottom{
+  margin-top: auto;
+  display: flex;
+}
+.footer-right,.footer-left{
+  flex: 1;
+}
+.footer-head h1{
+  color: #fff;
+  font-size: clamp(28px, 4vw, 62px);
+}
+.copyright p,.foot-para p,.address p{
+  color: #fff;
+}
+.footer-right{
+  display: flex;
+  flex-direction: column;
+}
+.copyright{
+  margin-top: auto;
+}
+.icons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
 
+.icon svg {
+  color: #fff; /* or black depending on your footer */
+  transition: 0.3s ease;
+}
+
+.icon:hover svg {
+  color: #ff7e05; 
+  transform: scale(1.1);
+}
 
 @media (max-width: 1150px) {
   .black-div-cards {
@@ -559,11 +600,23 @@ body {
     left: 50%;
     transform: translateX(-50%);
   }
+
 }
 @media (max-width: 600px) {
   .black-div-cards {
     display: flex;
     flex-direction: column;
+  }
+
+}
+@media (max-width: 450px){
+  footer{
+    height: 300px;
+  }
+  .footer-bottom{
+    margin-top: 40px;
+    flex-direction: column;
+    gap: 20px;
   }
 }
 @media (max-width: 435px) {
