@@ -350,8 +350,13 @@ body {
   font-size: 32px;
 }
 .span-line {
-  width: 50px;
+  display: block;
+  width: 70px;
   height: 2px;
+  background: #000;
+  margin-bottom:70px;
+  transform-origin: center;
+  transition: transform 0.2s linear;
 }
 
 @media (max-width: 1150px) {
