@@ -557,17 +557,80 @@ footer {
 }
 
 .two-img-images {
-  flex: 1;                              
+  flex: 1;
   height: 100%;
-  border-radius: var(--border-radius); 
-  overflow: hidden;                    
+  border-radius: var(--border-radius);
+  overflow: hidden;
 }
 
 .two-img-images img {
   width: 100%;
   height: 100%;
-  object-fit: cover;                  
+  object-fit: cover;
   display: block;
+}
+
+.portfolio-container {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 32px 32px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "black-white-1 headphone-2 stains-3 metro-4 metro-4"
+    "lovely-day-5 bill-board-6 bill-board-6 metro-4 metro-4"
+    "lovely-day-5 bill-board-6 bill-board-6 glasses-7 watch-8";
+  border-radius: var(--border-radius);
+}
+.portfolio-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: var(--transition-base);
+}
+.portfolio-container img:hover {
+  filter: brightness(0.5);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.portfolio-container > div {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+.black-white-1 {
+  grid-area: black-white-1;
+}
+
+.headphone-2 {
+  grid-area: headphone-2;
+}
+
+.stains-3 {
+  grid-area: stains-3;
+}
+
+.lovely-day-5 {
+  grid-area: lovely-day-5;
+}
+
+.bill-board-6 {
+  grid-area: bill-board-6;
+}
+
+.metro-4 {
+  grid-area: metro-4;
+}
+
+.glasses-7 {
+  grid-area: glasses-7;
+}
+
+.watch-8 {
+  grid-area: watch-8;
 }
 
 @media (max-width: 1150px) {

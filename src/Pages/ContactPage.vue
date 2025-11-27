@@ -1,15 +1,19 @@
 <template>
     <NavBar/>
-    Contact
+    
+    <Footer/>
+    
 </template>
 
 <script>
 import NavBar from '../components/NavBar.vue';
+import Footer from '../components/Footer.vue'
+
 
     export default{
         name:'ContactPage',
         components:{
-            NavBar,
+            NavBar, Footer
         }
     }
 </script>
