@@ -89,7 +89,11 @@ body {
   will-change: transform;
   z-index: 1;
 }
-
+.hero-para{
+  margin-top:auto ;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
 /* Card stays above everything */
 .section-card {
   position: absolute;
@@ -103,6 +107,10 @@ body {
   border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
+}
+.about-section{
+  left: auto;
+  right: 32px;
 }
 .section-card h1 {
   font-size: clamp(2.5rem, 2vw + 1rem, 5rem);
