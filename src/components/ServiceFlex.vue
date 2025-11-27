@@ -18,7 +18,6 @@
 <script>
 export default {
     name: "ServiceSection",
-
     data() {
         return {
             services: [

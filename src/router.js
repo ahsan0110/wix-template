@@ -4,6 +4,7 @@ import AboutPage from "./Pages/AboutPage.vue";
 import ContactPage from "./Pages/ContactPage.vue";
 import WorkPage from "./Pages/WorkPage.vue";
 import ServicePage from "./Pages/ServicePage.vue";
+import Slider from "./Pages/slider.vue";
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: "/services",
     name: "ServicePage",
     component: ServicePage,
+  },
+  {
+    path: "/slider",
+    name: "Slider",
+    component: Slider,
   },
 ];
 
