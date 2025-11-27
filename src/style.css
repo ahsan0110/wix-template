@@ -83,7 +83,7 @@ body {
   left: 0;
   width: 120%;
   height: 100%;
-  background-image: url("/hero.png");
+  /* background-image: url("/hero.png"); */
   background-size: cover;
   background-position: center;
   will-change: transform;

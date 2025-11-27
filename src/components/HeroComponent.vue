@@ -1,15 +1,36 @@
 <template>
     <section class="hero-section">
-        <div ref="layer" class="hero-img-layer"></div>
+        <div ref="layer" class="hero-img-layer" :style="{ backgroundImage: `url(${bgImage})` }"></div>
         <div class="section-card">
-            <h1>TAILORED <br>MARKETING <br>STRATEGIES</h1>
-            <h4>Empowering Businesses Digitally</h4>
-            <button id="hero-btn" class="btn">Explore More</button>
+            <h1 v-html="title"></h1>
+            <h4>{{ subtitle }}</h4>
+            <button class="btn" id="hero-btn">
+                {{ buttonText }}
+            </button>
         </div>
     </section>
 </template>
 <script>
 export default {
+
+    props: {
+        bgImage: {
+            type: String, default: "/hero.png"
+        },
+        title: {
+            type: String,  default: "TAILORED<br>MARKETING <br>STRATEGIES"
+        },
+        subtitle: {
+            type: String,
+            default: "Empowering Businesses Digitally"
+        },
+        buttonText: {
+            type: String,
+            default: "Learn More"
+        },
+
+    },
+
     mounted() {
         const layer = this.$refs.layer;
         let offset = 0;
