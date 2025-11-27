@@ -112,6 +112,7 @@ body {
   left: auto;
   right: 32px;
 }
+
 .section-card h1 {
   font-size: clamp(2.5rem, 2vw + 1rem, 5rem);
 }
