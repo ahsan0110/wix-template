@@ -1,10 +1,11 @@
 <template>
     <section class="hero-section">
         <div ref="layer" class="hero-img-layer" :style="{ backgroundImage: `url(${bgImage})` }"></div>
-        <div class="section-card">
+        <div class="section-card about-section">
             <h1 v-html="title"></h1>
             <h4>{{ subtitle }}</h4>
-            <button class="btn" id="hero-btn">
+            <p v-if="showPara" class="hero-para">{{ para }}</p>
+            <button v-if="showButton" class="btn" id="hero-btn">
                 {{ buttonText }}
             </button>
         </div>
@@ -12,13 +13,13 @@
 </template>
 <script>
 export default {
-
+    name: "HeroComponent",
     props: {
         bgImage: {
             type: String, default: "/hero.png"
         },
         title: {
-            type: String,  default: "TAILORED<br>MARKETING <br>STRATEGIES"
+            type: String, default: "TAILORED<br>MARKETING <br>STRATEGIES"
         },
         subtitle: {
             type: String,
@@ -28,6 +29,19 @@ export default {
             type: String,
             default: "Learn More"
         },
+        showButton: {
+            type: Boolean,
+            default: true
+        },
+        showPara: {
+            type: Boolean,
+            default: false
+        },
+        para: {
+            type: String,
+            default: ""
+        },
+
 
     },
 
