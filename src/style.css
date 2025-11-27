@@ -573,9 +573,9 @@ footer {
 .portfolio-container {
   margin-top: 32px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 32px 32px;
+  grid-template-columns: 1.5fr 0.7fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: clamp(14px, 1.4vw, 32px);
   grid-auto-flow: row;
   grid-template-areas:
     "black-white-1 headphone-2 stains-3 metro-4 metro-4"
@@ -633,6 +633,58 @@ footer {
   grid-area: watch-8;
 }
 
+.portfolio2-container {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 4.5fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: clamp(14px, 1.4vw, 32px);
+  grid-auto-flow: row;
+  grid-template-areas:
+    "earing earing flex-board flex-board flex-board"
+    "earing earing flex-board flex-board flex-board"
+    "guldier cream flex-board flex-board flex-board";
+}
+
+.earing {
+  grid-area: earing;
+}
+
+.guldier {
+  grid-area: guldier;
+}
+
+.cream {
+  grid-area: cream;
+}
+
+.flex-board {
+  grid-area: flex-board;
+}
+
+.portfolio2-container div {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--border-radius);
+}
+
+.portfolio2-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--border-radius);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.portfolio2-container img:hover {
+  transform: scale(1.05);
+  filter: brightness(0.5);
+  cursor: pointer;
+}
+
 @media (max-width: 1150px) {
   .black-div-cards {
     display: grid;
@@ -641,6 +693,18 @@ footer {
   }
   .div-cards {
     width: auto;
+  }
+}
+@media (max-width: 1024px) {
+  .portfolio-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "black-white-1 headphone-2 stains-3"
+      "metro-4 metro-4 metro-4"
+      "lovely-day-5 bill-board-6 glasses-7"
+      "watch-8 watch-8 watch-8";
+    gap: 16px;
   }
 }
 @media (max-width: 850px) {
@@ -739,9 +803,36 @@ footer {
   .div4 {
     height: 300px;
   }
+
   /* .div4 img{
     object-position: center top;
   } */
+
+  .portfolio-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "black-white-1"
+      "headphone-2"
+      "stains-3"
+      "metro-4"
+      "lovely-day-5"
+      "bill-board-6"
+      "glasses-7"
+      "watch-8";
+    gap: 12px;
+  }
+
+  .portfolio2-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+    grid-template-areas:
+      "earing earing"
+      "flex-board flex-board"
+      "guldier cream";
+  }
 }
 @media (max-width: 700px) {
   .section-card {
