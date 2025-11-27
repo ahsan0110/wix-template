@@ -491,6 +491,23 @@ footer{
   color: #ff7e05; 
   transform: scale(1.1);
 }
+.black-card-section{
+  border-radius: var(--border-radius);
+  margin-top: clamp(28px, 4vw, 38px);
+  padding: clamp(28px, 4vw, 62px);
+  background-color: #000;
+  color: #fff;
+  height: clamp(200px, 20vw, 350px);
+}
+.black-card h1{
+  margin-top: 10px;
+  font-size: clamp(28px, 4vw, 62px);
+}
+.black-card p{
+  font-size: clamp(14px, 1.4vw, 32px);
+  font-family: 'Times New Roman', Times, serif;
+}
+
 
 @media (max-width: 1150px) {
   .black-div-cards {
