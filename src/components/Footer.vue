@@ -1,10 +1,10 @@
 <template>
   <footer>
-    <div class="footer-head">
+    <div class="footer-head reveal">
       <h1>T. KENSINGTON</h1>
     </div>
     <div class="footer-bottom">
-      <div class="footer-left">
+      <div class="footer-left reveal">
         <div class="icons">
           <a href="#" target="_blank" class="icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -44,7 +44,7 @@
           <p>Francisco, CA 94158</p>
         </div>
       </div>
-      <div class="footer-right">
+      <div class="footer-right reveal">
         <div class="foot-para">
           <p>Privacy Policy</p>
           <p>Accessibility Statement</p>
@@ -56,3 +56,33 @@
     </div>
   </footer>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      visibleFooter: false,
+    };
+  },
+
+  mounted() {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  }
+
+
+}
+</script>
+
+<style>
+
+</style>

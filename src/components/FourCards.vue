@@ -1,8 +1,11 @@
 <template>
     <div class="cards-main-section">
         <div class="top-black-div">
-            <p>Our Service</p>
-            <h1>TAILORED MARKETING SOLUTIONS</h1>
+            <div class="reveal">
+
+                <p>Our Service</p>
+                <h1>TAILORED MARKETING SOLUTIONS</h1>
+            </div>
         </div>
         <div class="black-div-cards">
             <div class="div-cards">

@@ -5,8 +5,11 @@
     <div ref="plusDiv" class="div-plus div-grey" :class="{ animate: isVisible[2] }"></div>
 
     <div class="div-strategy">
-      <h1>STRATEGY DEVELOPMENT</h1>
-      <p>Custom marketing strategies with SEO, PPC, social media & content marketing</p>
+      <div class="reveal">
+
+        <h1>STRATEGY DEVELOPMENT</h1>
+        <p>Custom marketing strategies with SEO, PPC, social media & content marketing</p>
+      </div>
     </div>
 
     <div class="div-dark-grey"></div>
@@ -48,6 +51,7 @@ export default {
 
     divs.forEach((div) => observer.observe(div));
   },
+  
 };
 </script>
 

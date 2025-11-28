@@ -2,13 +2,13 @@
     <div class="contact-form-section">
         <div class="contact-img">
             <img :src="imgSrc" alt="">
-            <div v-if="showOverlay" class="img-overlay">
+            <div v-if="showOverlay" class="img-overlay reveal">
                 <p>{{ overlaySubtitle }}</p>
                 <h1>{{ overlayTitle }}</h1>
             </div>
         </div>
         <div class="contact-form">
-            <div class="contact-head">
+            <div class="contact-head reveal">
                 <p>Get in Touch</p>
                 <h1>CONTACT US</h1>
                 <p>Have a question or need more information?</p>
@@ -47,7 +47,22 @@ export default {
         showOverlay: { type: Boolean, default: false },
         overlayTitle: { type: String, default: "" },
         overlaySubtitle: { type: String, default: "" }
+    },
+    mounted() {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            },
+            { threshold: 0.2 }
+        );
+
+        document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
     }
+
 };
 </script>
 
@@ -110,7 +125,7 @@ export default {
     }
 
     .img-overlay h1 {
-       
+
         font-size: 32px;
     }
 
