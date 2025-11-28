@@ -82,7 +82,7 @@ export default {
 .div-grey::after {
   content: "";
   position: absolute;
-  width: 45%;
+  width: 35%;
   height: 2px;
   background-color: #000;
   top: 50%;

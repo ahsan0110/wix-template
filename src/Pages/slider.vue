@@ -165,4 +165,37 @@ export default {
 .dot.active {
     background-color: white;
 }
+@media (max-width: 768px) {
+  .slider-container {
+    height: clamp(220px, 60vw, 450px);
+  }
+
+  .prev, .next {
+    font-size: 24px;
+    padding: 8px 10px;
+  }
+
+  .dot {
+    width: 9px;
+    height: 9px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .slider-container {
+    height: clamp(180px, 65vw, 380px);
+  }
+
+  .prev, .next {
+    font-size: 20px;
+    padding: 6px 8px;
+    top: 55%;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+}
 </style>
