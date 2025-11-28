@@ -44,7 +44,7 @@
             </div>
         </div>
         <div class="div6 ">
-            <div class="reveal">
+            <div class="reveal stars">
                 <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
 
                 <q>T. KENSINGTON'S EXPERTISE IN DIGITAL MARKETING IS UNMATCHED. THEIR STRATEGIES HAVE SIGNIFICANTLY

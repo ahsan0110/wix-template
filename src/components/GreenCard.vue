@@ -68,7 +68,7 @@ export default {
 /* Div styling */
 .div-grey {
   background: #e0e0e0;
-  width: 100px;
+  width: 100%;
   height: 100px;
   position: relative;
   display: flex;
@@ -82,7 +82,7 @@ export default {
 .div-grey::after {
   content: "";
   position: absolute;
-  width: 60%;
+  width: 45%;
   height: 2px;
   background-color: #000;
   top: 50%;
