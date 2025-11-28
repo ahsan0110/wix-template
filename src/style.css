@@ -774,9 +774,10 @@ footer {
   .pages {
     position: absolute;
     top: 125px;
-    right: 32px;
+    left: 50%;
+    transform: translateX(-50%);
     background: var(--lightGrey);
-    width: 88%;
+    width: 90%;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
@@ -860,6 +861,9 @@ footer {
   .div4 {
     height: 300px;
   }
+  .pages{
+    width:88%
+  }
 
   /* .div4 img{
     object-position: center top;
@@ -913,6 +917,11 @@ footer {
   }
 }
 @media (max-width: 600px) {
+  .pages{
+    width:86%
+  }
+}
+@media (max-width: 600px) {
   .black-div-cards {
     display: flex;
     flex-direction: column;
@@ -935,6 +944,9 @@ footer {
     flex-direction: column;
     gap: 20px;
   }
+  .pages{
+    width:85%
+  }
 }
 @media (max-width: 435px) {
   body {
@@ -954,5 +966,20 @@ footer {
   }
   .info-section h1 {
     text-align: center;
+  }
+}
+@media (max-width: 400px){
+  .pages{
+    width: 84%;
+  }
+}
+@media (max-width: 350px){
+  .pages{
+    width: 82%;
+  }
+}
+@media (max-width: 320px){
+  .pages{
+    width: 80%;
   }
 }
