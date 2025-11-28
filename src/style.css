@@ -114,7 +114,7 @@ body {
 }
 
 .section-card h1 {
-  font-size: clamp(2.5rem, 2vw + 1rem, 5rem);
+  font-size: clamp(2rem, 2vw + 1rem, 5rem);
 }
 .section-card h4 {
   font-size: clamp(1.2rem, 1.2vw + 0.4rem, 1.5rem);
@@ -861,6 +861,10 @@ footer {
   .contact-form {
     max-width: 100%;
   }
+  .span-line{
+    width: 50px;
+    margin-top: 30px;
+  }
 }
 @media (max-width: 750px) {
   .parent {
@@ -870,6 +874,7 @@ footer {
   .div1 p,
   .div2 p {
     max-width: 100%;
+    font-size: 14px;
   }
   .div4 {
     height: 300px;
